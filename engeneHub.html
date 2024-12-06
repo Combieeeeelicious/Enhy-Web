@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhaflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<style>
+    @font-face {
+        font-family: "bebas";
+        src: url("./resources/BebasNeue-Regular.woff2");
+    }
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+    #header {
+        margin-bottom: 400px;
+    }
+    #left-banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 750px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-image: linear-gradient(to right, rgba(0,0,0.1) 50%, rgba(0,0,0.5) 75%, rgba(0,0,0,0));
+    }
+    #enhaflix-logo {
+        font-family: "bebas";
+        font-size: 30px;
+        color: #DB202C;
+    }
+    #en-presents {
+        padding-top: 75px;
+        padding-left: 20px;
+    }
+    #logo {
+        width: 400px;
+        padding-bottom: 75px;
+    }
+    #buttons {
+        display: inline-flex;
+    }
+    .button {
+        padding: 10px;
+        margin: 10px;
+    }
+    i {
+        display: inline;
+    }
+    h3 {
+        display: inline;
+    }
+    #play-button {
+        background-color: #DB202C;
+    }
+    #my-list-button {
+        border: .5px solid white;
+    }
+    #img-banner {
+        float: right;
+        font-weight: initial;
+    }
+    h2 {
+        margin-top: 100px;
+    }
+    .list {
+        display: inline-flex;
+        width: 100%;
+        overflow: scroll;
+    }
+    .show {
+        margin: 20px;
+    }
+    .show img {
+        height: 400px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 4%;
+        margin: 10px;
+        transition: transform 1s ease;
+    }
+    .show img:hover {
+        transform: scale(1.15);
+    }
+</style>
+<body>
+        <div id="header">
+            <div id="left-banner">
+                <h1 id="en-presents"><span id="enhaflix-logo">EnhaFlix</span>Original</h1>
+                <img src="./resources/logo.png">
+                
+                <div id="buttons">
+                    <span id="play-button" class="button">
+                        <i class="fa-solid fa-play"></i><h3>Enhypen Playlist</h3>
+                    </span>
+                    <span id="my-list-button" class="button">
+                        <i class="fa-solid fa-plus"></i><h3>MY LIST</h3>
+                    </span>
+                </div>
+            </div>
+            <img src="./resources/bg.jpeg" id="img-banner">
+        </div>
+        <h2>Emi's Recs</h2>
+        <div class="list">
+            <div class="show">
+                <img src="https://i.pinimg.com/564x/cb/3f/dc/cb3fdc44302856ecf3197eac3900e8ce.jpg" id="iland" title="i-land">
+            </div>
+            <div class="show">
+                <img src="https://i.pinimg.com/564x/86/e5/6f/86e56f83ea6552feb3cd23feca519b81.jpg" id="enoclock" title="en-o'clock">
+            </div>
+            <div class="show">
+                <img src="https://i.pinimg.com/564x/1b/5a/d0/1b5ad0c63c3e5b5557765ade9d842424.jpg" id="game-caterers" title="game-caterers">
+            </div>
+            <div class="show">
+                <img src="https://i.pinimg.com/564x/28/f0/53/28f053d1fc98232fa4e595e77260a1fa.jpg" id="sosofun" title="so so fun">
+            </div>
+        </div>
+        <h2>YT Series</h2>
+        <div class="list">
+            <div class="show">
+                <img src="https://i.pinimg.com/564x/4d/dd/fc/4dddfc266a2ad70c7b7f7487d2d82004.jpg" id="note" title="-note">
+            </div>
+                <div class="show">
+                    <img src="https://i.pinimg.com/564x/28/34/f8/2834f8b3c08d7fe4654b068d7d884f06.jpg" id="enlog" title="en-log">
+                </div>
+                <div class="show">
+                    <img src="https://i.pinimg.com/564x/dc/54/32/dc54327b1f1cdf54336e10cd65735b1c.jpg" id="episode" title="episode">
+                </div>
+        </div>
+            </div>
+        </section>
+        <script>
+            const sweetVenom = document.getElementById('header');
+const iland = document.getElementById('iland');
+const enoclock = document.getElementById('enoclock');
+const gameCaterers = document.getElementById('game-caterers');
+const sosofun = document.getElementById('sosofun');
+
+const note = document.getElementById('note');
+const enlog = document.getElementById('enlog');
+const episode = document.getElementById('episode');
+
+sweetVenom.addEventListener('click', () => {
+    window.location.href = './listenerHub.html';
+});
+
+iland.addEventListener('click', () => {
+    window.location.href = 'https://dramacool.com/pa/i-land-episode-1.html';
+});
+
+enoclock.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/playlist?list=PLMQ4WMltba-EXWrjvNC180j4YEGfZKXkO';
+});
+
+gameCaterers.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/playlist?list=PLr0T5CaHaPwUBW8ecEgu_09ZsVzaBBMCf';
+});
+
+sosofun.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/playlist?list=PLMQ4WMltba-GrMZTqRZinxleeAlwB6-YV';
+});
+
+note.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/playlist?list=PLMQ4WMltba-Erb1lLXpUbc5VVslavAZsi';
+});
+
+enlog.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/playlist?list=PLMQ4WMltba-F67iE1rTXm58n5mnFwqSir';
+});
+
+episode.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/playlist?list=PLMQ4WMltba-GGaK_O288AEWD3UpWUnkc';
+});
+        </script>
+</body>
+</html>
